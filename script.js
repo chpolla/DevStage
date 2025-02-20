@@ -49,7 +49,7 @@ const app = document.getElementById("app")
         <label for="link">
           <img src="./Assets/link.png" alt="Link icon">
         </label>
-        <input type="text" id="link" value="https://evento.com?ref=${userData.ref}" disabled>
+          <input type="text" id="link" value="https://evento.com?ref=${userData.ref}" disabled>
       </div>
     </main>
     <section class="stats">
@@ -61,6 +61,7 @@ const app = document.getElementById("app")
       </p>
     </section>
   `
+  app.setAttribute('class', 'page-invite')
  }
 
  const saveUser = (userData) =>{
@@ -143,7 +144,14 @@ const startApp = () => {
     </main>`
 
   app.innerHTML = content
+  app.setAttribute("class", "page-start")
   // updateImageLinks()
   formAction()
 }
-startApp()
+// startApp()
+showInvite({
+  email: 'chenriquep6@gmail.com',
+  phone: '999',
+  ref: 100
+})
+document.querySelector("header").onclick = () => startApp()
