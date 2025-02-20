@@ -148,10 +148,5 @@ const startApp = () => {
   // updateImageLinks()
   formAction()
 }
-// startApp()
-showInvite({
-  email: 'chenriquep6@gmail.com',
-  phone: '999',
-  ref: 100
-})
+startApp()
 document.querySelector("header").onclick = () => startApp()
